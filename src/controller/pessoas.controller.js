@@ -4,7 +4,7 @@ import {
   createPessoas, // deve ser igual ao nome exportado no service
   deletandoPessoas,
   updatedPessoasFull
-} from "../services/pessoas.services.js";
+} from "../services/pessoas.service.js";
 
 class PessoaController
 {

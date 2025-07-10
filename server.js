@@ -1,10 +1,10 @@
 import express from "express";
 import { logEvents, logger } from "./src/middleware/logger.middleware.js";
 import dotenv from "dotenv";
-import pessoas from "./src/router/pessoas.router.js";
-import avistamento from "./src/router/avistamento.router.js";
-import contato from "./src/router/contato.router.js"
-import local from "./src/router/localizacao.router.js"
+import pessoas from "./src/router/pessoas.routes.js";
+import avistamento from "./src/router/avistamento.routes.js";
+import contato from "./src/router/contato.routes.js"
+import local from "./src/router/localizacao.routes.js"
 import user from "./src/router/user.routes.js"
 import swaggerUi from "swagger-ui-express";
 import { createRequire } from "module";

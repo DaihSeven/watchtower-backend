@@ -1,4 +1,4 @@
-import local from '../localizacao.router.js';
+import local from '../localizacao.routes.js';
 
 describe('localizacao router', () => {
 it('deve definir todas as rotas corretamente', () => {

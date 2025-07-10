@@ -96,12 +96,3 @@ model Localizacao {
                                                                     
 }
 
-model TipoServico {
-  id          String   @id @default(uuid())
-  nome        String   @unique 
-  descricao   String?  
-  custoEstimado Float?  
-  ativo       Boolean  @default(true) 
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-}

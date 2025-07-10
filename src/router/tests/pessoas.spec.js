@@ -1,4 +1,4 @@
-import pessoas from '../pessoas.router.js';
+import pessoas from '../pessoas.routes.js';
 
 describe('pessoas router', () => {
 it('deve definir todas as rotas corretamente', () => {

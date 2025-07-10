@@ -1,4 +1,4 @@
-import * as pessoasService from '../pessoas.services.js';
+import * as pessoasService from '../pessoas.service.js';
 
 describe('pessoas.service', () => {
 it('deve exportar getAllPessoas', () => {

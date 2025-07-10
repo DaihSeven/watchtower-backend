@@ -1,4 +1,4 @@
-import * as usersService from '../user.services.js';
+import * as usersService from '../user.service.js';
 
 describe('users.service', () => {
 it('deve exportar registrar', () => {

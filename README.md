@@ -1,3 +1,11 @@
+# Alterações realizadas na v2:
+
+- Arquivos TipoServico deletados;
+- Formatação .services => .service, .router => .routes ;
+- Criado o banco de dados PostgreSQL;
+- Configurado o arquivo .env com a DATABASE_URL;
+- Popular o banco;
+
 # API Projeto Final
 
 Esta API é dedicada ao gerenciamento de informações sobre pessoas desaparecidas. Permite registrar ocorrências, visualizar casos, adicionar contatos e registrar avistamentos para auxiliar nas buscas.

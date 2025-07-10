@@ -1,4 +1,4 @@
-import * as avistamentoService from '../avistamento.services.js';
+import * as avistamentoService from '../avistamento.service.js';
 
 describe('avistamento.service', () => {
 it('deve exportar getAllAvistamentos', () => {

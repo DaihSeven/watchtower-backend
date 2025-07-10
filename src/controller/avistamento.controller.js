@@ -5,7 +5,7 @@ import {
     deleteAvistamento,
     updateAvistamento,
   // getAvistamentoById // Se for usar a função comentada
-} from "../services/avistamento.services.js";
+} from "../services/avistamento.service.js";
 
 
 class AvistamentoController {

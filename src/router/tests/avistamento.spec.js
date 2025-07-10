@@ -1,4 +1,4 @@
-import avistamento from '../avistamento.router.js';
+import avistamento from '../avistamento.routes.js';
 
 describe('avistamento router', () => {
 it('deve definir as rotas corretamente', () => {

@@ -1,4 +1,4 @@
-import contato from '../contato.router.js';
+import contato from '../contato.routes.js';
 
 describe('contato router', () => {
 it('deve definir todas as rotas corretamente', () => {
