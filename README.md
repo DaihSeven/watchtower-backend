@@ -6,6 +6,10 @@
 - Configurado o arquivo .env com a DATABASE_URL;
 - Popular o banco;
 
+
+### Repositório original: [https://github.com/Gusttavooll/Pessoas_Desaparecidas_Final.git](https://github.com/Gusttavooll/Pessoas_Desaparecidas_Final.git)
+### Colaboradores originais:Gustavo Alves de Lima, Nathalia Flores Martins, Luiz Miguel Santos de Jesus, Andrei Santos Moreira, Anna Luiza Pereira de Carvalho.
+
 # API Projeto Final
 
 Esta API é dedicada ao gerenciamento de informações sobre pessoas desaparecidas. Permite registrar ocorrências, visualizar casos, adicionar contatos e registrar avistamentos para auxiliar nas buscas.
