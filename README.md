@@ -5,6 +5,7 @@
 - Criado o banco de dados PostgreSQL;
 - Configurado o arquivo .env com a DATABASE_URL;
 - Popular o banco;
+- Arrumado controller, service e prisma de /contato, havia informações desconexas;
 
 
 ### Repositório original: [https://github.com/Gusttavooll/Pessoas_Desaparecidas_Final.git](https://github.com/Gusttavooll/Pessoas_Desaparecidas_Final.git)

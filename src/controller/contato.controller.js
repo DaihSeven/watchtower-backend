@@ -9,7 +9,7 @@ import {
 class ContatoController {
   async listarContatos(req, res) {
     try {
-      const contatos = listarTodos();
+      const contatos = await listarTodos();
       res.status(200).json({ contatos });
     } catch (error) {
       res.status(500).json({ mensagem: "Erro ao listar contatos." });
@@ -17,23 +17,23 @@ class ContatoController {
   }
 
   async criarContato(req, res) {
-    const { nome, telefone, email, pessoaId } = req.body;
+    const { nome, telefone, email, mensagem } = req.body;
 
-    if (!nome || !telefone || !pessoaId) {
-      return res.status(400).json({ mensagem: "Nome, telefone e pessoaId são obrigatórios." });
+    if (!nome || !email || !mensagem) {
+      return res.status(400).json({ mensagem: "Nome, email e mensagem são obrigatórios." });
     }
 
     try {
-      const novoContato = adicionarContato({ nome, telefone, email, pessoaId });
+      const novoContato = await adicionarContato({ nome, email, telefone, mensagem });
       res.status(201).json({ mensagem: "Contato criado com sucesso!", contato: novoContato });
     } catch (error) {
-      res.status(400).json({ mensagem: "Erro ao criar contato." });
+      res.status(400).json({ mensagem: "Erro ao criar contato.", error });
     }
   }
 
   async buscarContatoPorId(req, res) {
     try {
-      const contato = buscarPorId(req.params.id);
+      const contato = await buscarPorId(req.params.id);
       if (!contato) {
         return res.status(404).json({ mensagem: "Contato não encontrado." });
       }
@@ -57,7 +57,7 @@ class ContatoController {
 
   async deletarContato(req, res) {
     try {
-      const contatoDeletado = deletar(req.params.id);
+      const contatoDeletado = await deletar(req.params.id);
       if (!contatoDeletado) {
         return res.status(404).json({ mensagem: "Contato não encontrado." });
       }

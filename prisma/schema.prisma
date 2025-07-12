@@ -61,6 +61,7 @@ model Pessoa {
   criadoEm  DateTime @default(now())
   localizacoes Localizacao[] 
   @@map("users")
+
 }
 
 model Contato {
@@ -70,6 +71,7 @@ model Contato {
   telefone  String?
   mensagem  String
   criadoEm  DateTime @default(now())
+
 }
 
 

@@ -14,19 +14,19 @@ export const listarTodos = async () => {
 
 export const buscarPorId = async (id) => {
   return await prisma.contato.findUnique({
-    where: { id: Number(id)  },
+    where: { id },
   });
 };
 
 export const atualizar = async (id, novosDados) => {
   return await prisma.contato.update({
-    where: { id: Number(id)  },
+    where: { id },
     data: novosDados,
   });
 };
 
 export const deletar = async (id) => {
   return await prisma.contato.delete({
-    where: { id: Number(id)  },
+    where: { id  },
   });
 };
