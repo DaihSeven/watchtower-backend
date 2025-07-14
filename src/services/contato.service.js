@@ -1,10 +1,15 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-
 export const adicionarContato = async (dados) => {
   return await prisma.contato.create({
-    data: dados,
+    data: {
+      nome: dados.nome,
+      email: dados.email,
+      telefone: dados.telefone,
+      mensagem: dados.mensagem,
+      userId: dados.userId,
+    },
   });
 };
 
@@ -21,12 +26,17 @@ export const buscarPorId = async (id) => {
 export const atualizar = async (id, novosDados) => {
   return await prisma.contato.update({
     where: { id },
-    data: novosDados,
+    data: {
+      nome: novosDados.nome,
+      email: novosDados.email,
+      telefone: novosDados.telefone,
+      mensagem: novosDados.mensagem,
+    },
   });
 };
 
 export const deletar = async (id) => {
   return await prisma.contato.delete({
-    where: { id  },
+    where: { id: Number(id)},
   });
 };

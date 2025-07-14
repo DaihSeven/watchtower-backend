@@ -6,6 +6,7 @@ import avistamento from "./src/router/avistamento.routes.js";
 import contato from "./src/router/contato.routes.js"
 import local from "./src/router/localizacao.routes.js"
 import user from "./src/router/user.routes.js"
+import adminRoutes from "./src/router/admin.routes.js";
 import swaggerUi from "swagger-ui-express";
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
@@ -16,7 +17,7 @@ dotenv.config();
 
 const app = express();
 app.use(cors());
-const PORT = 3000;
+const PORT = 3002;
 
 
 app.use(logger);
@@ -24,6 +25,7 @@ app.use(express.json());
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 
+app.use('/admin', adminRoutes);
 app.use("/pessoas",pessoas );
 app.use("/avistamento",avistamento);
 app.use("/contato",contato);
