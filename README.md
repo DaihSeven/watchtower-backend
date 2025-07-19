@@ -7,6 +7,8 @@
 - Popular o banco;
 - Arrumado controller, service e prisma de /contato, havia informações desconexas;
 
+- BRANCH V1 intacta(não alterar);
+
 
 ### Repositório original: [https://github.com/Gusttavooll/Pessoas_Desaparecidas_Final.git](https://github.com/Gusttavooll/Pessoas_Desaparecidas_Final.git)
 ### Colaboradores originais:Gustavo Alves de Lima, Nathalia Flores Martins, Luiz Miguel Santos de Jesus, Andrei Santos Moreira, Anna Luiza Pereira de Carvalho.
