@@ -29,10 +29,9 @@ class PessoaController
   }
 
   if (!nome || !idade || !dataDesaparecimento || !status) {
-    return res.status(400).json({ message: "Forneça todos os campos obrigatórios para continuar..." });
+    return res.status(400).json({ message: "Campos obrigatórios faltando." });
   }
 
-  await logEvents(`Cadastrando Pessoa_Desaparecida`, "CadastrarPessoa.log");
   try {
     const pessoa = await createPessoas({
       nome,
@@ -40,14 +39,15 @@ class PessoaController
       dataDesaparecimento,
       descricao,
       status,
-      userId, 
+      userId,
+      file: req.file,
     });
-    res.status(201).json({ message: "Pessoa cadastrada com sucesso!", pessoa });
+
+    res.status(201).json({ message: "Pessoa cadastrada com imagem!", pessoa });
   } catch (error) {
-    res.status(500).json({ message: "Erro ao cadastrar pessoa.", error: error.message });
+    res.status(500).json({ message: "Erro ao cadastrar.", error: error.message });
   }
 }
-
 
     async deletarPessoas(req, res) {
   const { id } = req.params;

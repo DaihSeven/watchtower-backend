@@ -1,12 +1,13 @@
 {
   "name": "projeto_final",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js",
     "dev": "nodemon server.js",
     "start": "node server.js",
+    "seed": "tsx prisma/seed.ts",
     "prisma:migrate": "prisma migrate dev --schema=prisma/schema.prisma",
     "prisma:generate": "prisma generate --schema=prisma/schema.prisma",
     "prisma:studio": "prisma studio --schema=prisma/schema.prisma",
@@ -19,6 +20,8 @@
   "dependencies": {
     "@prisma/client": "^6.7.0",
     "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.7.0",
     "cors": "^2.8.5",
     "date-fns": "^4.1.0",
     "dotenv": "^16.5.0",
@@ -33,6 +36,7 @@
   },
   "devDependencies": {
     "jest": "^29.7.0",
-    "prisma": "^6.7.0"
+    "prisma": "^6.7.0",
+    "tsx": "^4.20.3"
   }
 }
