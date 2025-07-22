@@ -6,7 +6,9 @@
 - Configurado o arquivo .env com a DATABASE_URL;
 - Popular o banco;
 - Arrumado controller, service e prisma de /contato, havia informações desconexas;
-
+- Adicionado enum no tipo_usuário
+- Adicionado imagemUrl, novo campo no banco! para colocar imagens de pessoas desaparecidas com Cloudinary;
+- Banco resetado e atualizado.
 - BRANCH V1 intacta(não alterar);
 
 

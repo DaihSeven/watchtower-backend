@@ -49,6 +49,7 @@ model PessoaDesaparecida {
   dataCadastro        DateTime      @default(now()) @map("data_cadastro")
   dataAtualizacao     DateTime      @updatedAt @map("data_atualizacao")
   avistamentos        Avistamento[] @relation("AvistamentoToPessoaDesaparecida")
+  imagemUrl           String?  @map("imagem_url")
 
   @@map("pessoas_desaparecidas")
 }
@@ -67,7 +68,7 @@ model Pessoa {
 model Contato {
   id       String   @id @default(uuid())
   userId   Int
-  usuario  USER    @relation(fields: [userId], references: [id])
+  usuario  USER     @relation(fields: [userId], references: [id])
   nome     String
   email    String   @unique
   telefone String?
@@ -75,12 +76,18 @@ model Contato {
   criadoEm DateTime @default(now())
 }
 
+enum TipoUsuario {
+  admin
+  usuario
+}
+
+
 model USER {
-  id           Int    @id @default(autoincrement())
-  nome         String
-  email        String @unique
-  senha_hash   String
-  tipo_usuario String
+  id                  Int    @id @default(autoincrement())
+  nome                String
+  email               String @unique
+  senha_hash          String
+  tipo_usuario        TipoUsuario  // agora é enum
 
   dataCadastro         DateTime             @default(now()) @map("data_cadastro")
   dataAtualizacao      DateTime             @updatedAt @map("data_atualizacao")
