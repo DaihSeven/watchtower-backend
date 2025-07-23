@@ -6,7 +6,7 @@ import { upload } from "../config/uploadConfig.js";
 const pessoas = Router();
 
 pessoas.get("/",PessoaController.getPessoas);
-router.post('/cadastrar', upload.single('imagem'), verificarToken, pessoaController.cadastrarPessoas);
+pessoas.post('/cadastrar', upload.single('imagem'), verificarToken, PessoaController.cadastrarPessoas);
 pessoas.delete("/deletar/:id", verificarToken, PessoaController.deletarPessoas)
 pessoas.patch("/atualizar/:id", verificarToken, PessoaController.AtualizarPessoas)
 
